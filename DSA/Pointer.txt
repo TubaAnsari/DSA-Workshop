@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <malloc.h>
+
+struct node
+{
+    int data;
+    struct node*next;
+};
+
+int main  (int argc, char const *argv[])
+{
+    struct node n1;
+    struct node *newNode;
+    
+    n1.data=5;
+    n1.next= NULL;
+    newNode = (struct node *)malloc(sizeof(struct node));
+    newNode -> data = 10;
+    newNode-> next =NULL;
+    
+    printf("Value of n1 ka data = %d\n", n1.data);
+    printf("Value of newNode ka data = %d\n", newNode->data);
+    
+    return 0;
+}
